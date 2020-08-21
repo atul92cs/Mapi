@@ -1,3 +1,5 @@
+<?php
+include('./config/dbconfig.php');
 if(isset($_POST['add_data']))
   {
       $question=$_POST['question'];
@@ -24,12 +26,14 @@ if(isset($_POST['add_data']))
 
        if($newquestion)
        {
-           $msg='New question added';
-            echo json_encode($msg);
+           $_SESSION['status']='Question added';
+            header("Location:questions.php");
        }
        else
        {
-            $msg='Error occured';
-            echo json_encode($msg);
+            $_SESSION['status']='Question added';
+            header("Location:questions.php");
+  
        }
   }
+  ?>

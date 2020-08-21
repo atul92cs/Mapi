@@ -29,7 +29,7 @@
   </div>
 </nav>
 <div class="form-section">
-    <form action="" method="POST">
+    <form action="insertquestion.php" method="POST">
         <div class="form-group">
             <input type="text" name="question" id="question" placeholder="Question" class="form-control" required>
         </div>
@@ -55,7 +55,7 @@
             <input type="text" name="option7" id="option7" placeholder="Option7"  class="form-control" required>
         </div>
         <div class="form-group text-center">
-            <button class="btn btn-primary">Add</button>
+            <button class="btn btn-primary" name="add_data">Add</button>
         </div>
     </form>
 

@@ -48,7 +48,15 @@ function signIn(){
 auth.onAuthStateChanged((user)=>{
     if(user)
     {
-        let user=firebase.auth().currentUser;
+        let currentuser=firebase.auth().currentUser;
+        let uid;
+        if(user!=null)
+        {
+            uid=user.uid;
+
+        }
+         currentuser=firebase.database().ref().child(uid);
+        
     }
     else
     {

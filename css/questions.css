@@ -1,6 +1,8 @@
 .form-section
 {
-    margin:5vh 5vw 5vh 5vw;
+    margin:15vh 15vw 15vh 15vw;
+
+
 }
 .form-section h3 
 {
@@ -11,4 +13,5 @@
 .table-section 
 {
     margin: 5vh 2vw 5vh 2vw;
+    display: grid;
 }

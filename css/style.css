@@ -1,0 +1,7 @@
+.main-body
+{
+    margin:20vh 10vw 20vh 10vw;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-areas: "a b";
+}

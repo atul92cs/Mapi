@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    
+
     <title>Mapi</title>
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
      <script src="./js/userFunctions.js"></script>
-
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/index.css">
-</head>
+      <style>
+        .main-body
+        {
+          margin:30vh 30vw 30vh 30vw;
+        }
+        .main-body h4 
+        {
+          text-align: center;
+          margin-top:10vh;
+          margin-bottom: 10vh;
+        }
+      </style>
+    </head>
 <body>
      <div class="main-body">
+        <h4>Mapi</h4>
        <div id="message-section">
 
        </div>
@@ -23,8 +36,11 @@
          <div class="form-group">
            <input type="password" name="password"  id="password" placeholder="Password" class="form-control">
          </div>
-         <div class="form-group">
+         <div class="form-group text-center">
            <button class="btn btn-primary" onclick="signIn()">Login</button>
+         </div>
+         <div class="form-group text-center">
+           <a href="signup.html">Sign Up</a>
          </div>
        
      </div>

@@ -7,11 +7,11 @@
     $deleteQuestion=$database->getReference($ref)->remove();
     if($deleteQuestion)
     {
-      echo json_encode('Question deleted');
+      header("Location:questions.php");
     }
     else
     {
-      echo json_encode('Error occured');
+      header("Location:questions.php");
     }
   }
  

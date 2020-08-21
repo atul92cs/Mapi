@@ -5,3 +5,18 @@
     grid-template-columns: repeat(2,2fr);
     grid-template-areas: "a b";
 }
+.info-section
+{
+    grid-area: a;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-areas: "a b";
+}
+.user-section
+{
+    grid-area: a;
+}
+.question-section
+{
+    grid-area: b;
+}

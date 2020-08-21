@@ -82,6 +82,7 @@
             $ref='questions/';
             $questions=$database->getReference($ref)->getValue();
             if($questions>0)
+            {
             $i=0;
             foreach($questions as $key=>$row)
             {
@@ -98,15 +99,30 @@
                     <td><?php echo $row["op5"]?></td>
                     <td><?php echo $row["op6"]?></td>
                     <td><?php echo $row["op7"]?></td>
-                    <td><button class="btn btn-danger">Delete</button></td>
+                    <td>
+                        <form action="deletequestion.php" method="post">
+                            <input type="hidden" name="token" value="<?php echo $key; ?>">
+                            <button class="btn btn-danger" name="delete_question">Delete</button>
+                        </form>
+                    </td>
                     <td><button class="btn btn-primary">Edit</button></td>
                 </tr>
             <?php
             }
+        } 
+            else
+            {
+                ?>
+                <h4>No questions found</h4>
+                <?php
+            }
             ?>
         </tbody>
    </table>
-   
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="./js/questionFunctions.js"></script>
 </div>
 </body>
 </html>

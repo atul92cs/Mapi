@@ -56,5 +56,9 @@ auth.onAuthStateChanged((user)=>{
     }
 });
 signOut=()=>{
+    
     auth.signOut();
+    setTimeout(() => {
+        window.location.replace('index.html');
+    }, 1000);
 }

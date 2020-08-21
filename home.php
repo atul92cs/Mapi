@@ -29,7 +29,7 @@
           <a href="" class="nav-link">Questions</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" onclick="signOut()">Logout</a>
+        <button class="btn btn-primary" onclick="signOut()">Logout</button>
       </li>
     </ul>
   </div>

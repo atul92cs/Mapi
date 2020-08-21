@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapi</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/questions.css">
+</head>
+<body>
+    <div class="form-section">
+         <h3>Add Question</h3>
+        <form action="" method="post">
+            <div class="form-group">
+                <input type="text" name="question" placeholder="Question" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="option1" placeholder="Option 1" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="option2" placeholder="Option 2" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="option3" placeholder="Option 3" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="option4" placeholder="Option 4" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="option5" placeholder="Option 5" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="option6" placeholder="Option 6" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="option7" placeholder="Option 7" class="form-control">
+            </div>
+            <div class="form-group text-center">
+                <button class="btn btn-primary" name="add_data">Add</button>
+            </div>
+        </form>
+    </div>
+    <div class="table-section">
+      <table class="table">
+          <thead class="thead-dark">
+              <tr>
+                  <th scope="col">Sr.No</th>
+                  <th scope="col">Question</th>
+                  <th scope="col">Option 1</th>
+                  <th scope="col">Option 2</th>
+                  <th scope="col">Option 3</th>
+                  <th scope="col">Option 4</th>
+                  <th scope="col">Option 5</th>
+                  <th scope="col">Option 6</th>
+                  <th scope="col">Option 7</th>
+                  <th scope="col">Action</th>
+              </tr>
+          </thead>
+          <tbody id="table-body">
+              <tr>
+                
+              </tr>
+          </tbody>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+        getData=()=>{
+            let xhr=new XMLHttpRequest();
+            xhr.open('GET','getquestions.php',true);
+            xhr.onload=()=>{
+                if(xhr.readStatus==4||xhr.status==200)
+                {
+                    let i=0;
+                    const results=JSON.parse(xhr.responseText);
+                    results.forEach(element => {
+                        i++
+                        let table=document.getElementById('table-body');
+                        let tablerow=document.createElement('tr');
+                        let srnocolumn=document.createElement('td');
+                        let srno=document.createTextNode(i);
+                        srnocolumn.append(srno);
+                        let questioncolumn=document.createElement('td');
+                        let question=document.createTextNode(element.question);
+                        questioncolumn.append(question);
+                        let option1col=document.createElement('td');
+                        let option1=document.createTextNode(element.op1);
+                        option1col.append(option1);
+                        let option2col=document.createElement('td');
+                        let option2=document.createTextNode(element.op2);
+                        option2col.append(option2);
+                        let option3col=document.createElement('td');
+                        let option3=document.createTextNode(element.op3);
+                        option3col.append(option3);
+                        let option4col=document.createElement('td');
+                        let option4=document.createTextNode(element.op4);
+                        option4col.append(option4);
+                        let option5col=document.createElement('td');
+                        let option5=document.createTextNode(element.op5);
+                        option5col.append(option5);
+                        let option6col=document.createElement('td');
+                        let option6=document.createTextNode(element.op6);
+                        option6col.append(option6);
+                        let option7col=document.createElement('td');
+                        let option7=document.createTextNode(element.op7);
+                        option7col.append(option7);
+                        tablerow.append(srnocolumn);
+                        tablerow.append(question);
+                        tablerow.append(option1col);
+                        tablerow.append(option2col);
+                        tablerow.append(option3col);
+                        tablerow.append(option4col);
+                        tablerow.append(option5col);
+                        tablerow.append(option6col);
+                        tablerow.append(option7col);
+                        table.append(tablerow);
+                        
+                        
+                    });
+                }
+                else
+                {
+                    console.log('error occured');
+                }
+            }
+           xhr.send();
+        }
+        getData();
+    </script>
+</body>
+</html>

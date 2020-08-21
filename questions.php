@@ -17,17 +17,21 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Users</a>
+        <a class="nav-link" href="users.php">Users</a>
       </li>
       <li class="nav-item">
-          <a href="" class="nav-link">Questions</a>
+          <a href="questions.php" class="nav-link">Questions</a>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-primary" onclick="signOut()">Logout</button>
       </li>
     </ul>
   </div>
 </nav>
+
 <div class="form-section">
     <form action="insertquestion.php" method="POST">
         <div class="form-group">

@@ -24,25 +24,25 @@
             <input type="text" name="question" value="<?php echo $getData['question']?>" id="question" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="option1" value="<?php echo $getData['op1']?> id="option1" class="form-control">
+            <input type="text" name="option1" value="<?php echo $getData['op1']?>" id="option1" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="option2" value="<?php echo $getData['op2']?> id="option2" class="form-control">
+            <input type="text" name="option2" value="<?php echo $getData['op2']?>" id="option2" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="option3" value="<?php echo $getData['op3']?> id="option3" class="form-control">
+            <input type="text" name="option3" value="<?php echo $getData['op3']?>" id="option3" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="option4" value="<?php echo $getData['op4']?> id="option4" class="form-control">
+            <input type="text" name="option4" value="<?php echo $getData['op4']?>" id="option4" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="option5" value="<?php echo $getData['op5']?> id="option5" class="form-control">
+            <input type="text" name="option5" value="<?php echo $getData['op5']?>" id="option5" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="option6" value="<?php echo $getData['op6']?> id="option6" class="form-control">
+            <input type="text" name="option6" value="<?php echo $getData['op6']?>" id="option6" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="option7" value="<?php echo $getData['op7']?> id="option7" class="form-control">
+            <input type="text" name="option7" value="<?php echo $getData['op7']?>" id="option7" class="form-control">
         </div>
         <div class="form-gorup text-center">
             <button class="btn btn-primary" name="update_question">Update</button>

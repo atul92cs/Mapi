@@ -51,7 +51,7 @@
             <th scope="col">Answer6</th>
             <th scope="col">Answer7</th>
             <th scope="col">Seconds</th>
-
+              <th scope="col">Action</th>
 
         </tr>
 
@@ -70,8 +70,8 @@
     ?>
         <tr>
             <td><?php echo $i?></td>
-            <td><?php echo $row['Name'] ? row['Name']:" "?></td>
-            <td><?php echo $row['Location'] ? row['Location']:" " ?></td>
+            <td><?php echo $row['Name'] ? $row['Name']:" "?></td>
+            <td><?php echo $row['Location'] ? $row['Location']:" " ?></td>
             <td><?php echo $row['Mobile'] ?  $row['Mobile']:" "?></td>
             <td><?php echo $row['Reward'] ?  $row['Reward'] :" "?></td>
             <td><?php echo $row['Status'] ?  $row['Status']:" "?></td>
@@ -82,14 +82,15 @@
             <td><?php echo $row['Answer5'] ?  $row['Answer5']:" "?></td>
             <td><?php echo $row['Answer6'] ?  $row['Answer6']:" "?></td>
             <td><?php echo $row['Answer7'] ?  $row['Answer7']:" "?></td>
-        </tr>
+            <td><a href="getuser.php?token=<?php echo $key?>"><button class="btn btn-primary">Get User</button></a></td>
+          </tr>
     <?php
     }
         }
         else
         {
     ?>
-        <h4>No Data available</h4>
+        <td><h4>No Data available</h4></td>
     <?php
         }    
     ?>

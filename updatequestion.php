@@ -1,4 +1,5 @@
 <?php
+ include('./config/dbconfig.php');
 if(isset($_POST['update_question']))
   {
     $token=$_POST['token'];
@@ -21,15 +22,17 @@ if(isset($_POST['update_question']))
       'op6'=>$option6,
       'op7'=>$option7
     ];
-    $ref='question/'.$token;
+    $ref='questions/'.$token;
     $updateData=$database->getReference($ref)->update($data);
     if($updateData)
     {
-      echo json_encode('Question details updated');
+      $_SESSION['status']='Question added';
+       header("Location:questions.php");  
     }
     else
     {
-      echo json_encode('Error occured');
+      $_SESSION['status']='Error occured';
+      header("Location:questions.php");
     }
   }
   ?>

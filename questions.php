@@ -104,6 +104,9 @@
                     <td><?php echo $row["op6"]?></td>
                     <td><?php echo $row["op7"]?></td>
                     <td>
+                        <a href="editquestions.php?token=<?php echo key?>"></a>
+                    </td>
+                    <td>
                         <form action="deletequestion.php" method="post">
                             <input type="hidden" name="token" value="<?php echo $key; ?>">
                             <button class="btn btn-danger" name="delete_question">Delete</button>

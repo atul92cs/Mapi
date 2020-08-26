@@ -1,4 +1,4 @@
-const firebaseConfig = {
+let firebaseConfig = {
     apiKey: "AIzaSyCRREradM-W9MET5-sRvZLxgHBCsGkQKnM",
     authDomain: "mapi-1c5da.firebaseapp.com",
     databaseURL: "https://mapi-1c5da.firebaseio.com",
@@ -55,7 +55,7 @@ auth.onAuthStateChanged((user)=>{
             uid=user.uid;
 
         }
-         currentuser=firebase.database().ref().child(uid);
+         
         
     }
     else
@@ -70,3 +70,10 @@ signOut=()=>{
         window.location.replace('index.html');
     }, 1000);
 }
+let db=firebase.firestore();
+let day=new Date().getDate();
+let month= new Date().getMonth();
+let year=new Date().getFullYear();
+let date=day+'-'+month+'-'+year;
+let user=db.collection('user').numChildren();
+console.log(user);

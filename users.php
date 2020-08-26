@@ -70,18 +70,18 @@
     ?>
         <tr>
             <td><?php echo $i?></td>
-            <td><?php echo $row['Name'] ? $row['Name']:" "?></td>
-            <td><?php echo $row['Location'] ? $row['Location']:" " ?></td>
-            <td><?php echo $row['Mobile'] ?  $row['Mobile']:" "?></td>
-            <td><?php echo $row['Reward'] ?  $row['Reward'] :" "?></td>
-            <td><?php echo $row['Status'] ?  $row['Status']:" "?></td>
-            <td><?php echo $row['Answer1'] ?  $row['Answer1']:" "?></td>
-            <td><?php echo $row['Answer2'] ? $row['Answer2']:" "?></td>
-            <td><?php echo $row['Answer3'] ?  $row['Answer3']:" "?></td>
-            <td><?php echo $row['Answer4'] ?  $row['Answer4']:" "?></td>
-            <td><?php echo $row['Answer5'] ?  $row['Answer5']:" "?></td>
-            <td><?php echo $row['Answer6'] ?  $row['Answer6']:" "?></td>
-            <td><?php echo $row['Answer7'] ?  $row['Answer7']:" "?></td>
+            <td><?php echo $row['name'] ? $row['name']:" "?></td>
+            <td><?php echo $row['location'] ? $row['location']:" " ?></td>
+            <td><?php echo $row['mobile'] ?  $row['mobile']:" "?></td>
+            <td><?php echo $row['reward'] ?  $row['reward'] :" "?></td>
+            <td><?php echo $row['status'] ?  $row['status']:" "?></td>
+            <td><?php echo $row['answer1'] ?  $row['answer1']:" "?></td>
+            <td><?php echo $row['answer2'] ? $row['answer2']:" "?></td>
+            <td><?php echo $row['answer3'] ?  $row['answer3']:" "?></td>
+            <td><?php echo $row['answer4'] ?  $row['answer4']:" "?></td>
+            <td><?php echo $row['answer5'] ?  $row['answer5']:" "?></td>
+            <td><?php echo $row['answer6'] ?  $row['answer6']:" "?></td>
+            <td><?php echo $row['answer7'] ?  $row['answer7']:" "?></td>
             <td><a href="getuser.php?token=<?php echo $key?>"><button class="btn btn-primary">Get User</button></a></td>
           </tr>
     <?php

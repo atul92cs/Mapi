@@ -10,5 +10,5 @@
  console.log(datebyest);
 let rootRef=firebase.database().ref('/user');
 rootRef.orderByChild('date').equalTo(dateyest).on('value',snapshot=>{
-  console.log(snapshot.val());
+  console.log(snapshot.numChildren());
 });

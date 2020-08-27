@@ -7,9 +7,9 @@ let firebaseConfig = {
     messagingSenderId: "188474243832",
     appId: "1:188474243832:web:2686d691478359bc9ed90d"
   };
-firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
+
 
 function signUp(){
     
@@ -70,10 +70,4 @@ signOut=()=>{
         window.location.replace('index.html');
     }, 1000);
 }
-let db=firebase.firestore();
-let day=new Date().getDate();
-let month= new Date().getMonth();
-let year=new Date().getFullYear();
-let date=day+'-'+month+'-'+year;
-let user=db.collection('user').numChildren();
-console.log(user);
+console.log(db);

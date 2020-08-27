@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
     
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -60,12 +61,27 @@
       </div>
     </div>
     <div id="data-graph" class="flex-container">
-
+        
+        <p></p>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-      <script src="./js/userFunctions.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+      <script>
+      let firebaseConfig = {
+      apiKey: "AIzaSyCRREradM-W9MET5-sRvZLxgHBCsGkQKnM",
+      authDomain: "mapi-1c5da.firebaseapp.com",
+      databaseURL: "https://mapi-1c5da.firebaseio.com",
+      projectId: "mapi-1c5da",
+      storageBucket: "mapi-1c5da.appspot.com",
+      messagingSenderId: "188474243832",
+      appId: "1:188474243832:web:2686d691478359bc9ed90d"
+      };
+      firebase.initializeApp(firebaseConfig);
+      </script>
+     <!--<script src="./js/userFunctions.js"></script>-->
+      
       <script src="./js/homeFunctions.js"></script>
 </body>
 </html>

@@ -9,6 +9,15 @@
  let datebyest=dayyest+'-'+month2+'-'+year;
  console.log(datebyest);
 let rootRef=firebase.database().ref('/user');
+let yestcollection;
+let byestcollection;
+let todaycollection;
 rootRef.orderByChild('date').equalTo(dateyest).on('value',snapshot=>{
-  console.log(snapshot.numChildren());
+   yestcollection=snapshot.numChildren();
+});
+rootRef.orderByChild('date').equalTo(datebyest).on('value',snapshot=>{
+    byestcollection=snapshot.numChildren();
+});
+rootRef.orderByChild('date').equalTo(date).on('value',snapshot=>{
+    todaycollection=snapshot.numChildren();
 });
